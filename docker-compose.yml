@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  new-coin-bot:
+    build: 
+        context: .
+        dockerfile: Dockerfile
+    container_name: new-coin-bot
+    restart: unless-stopped
+    env_file:
+      - .env
